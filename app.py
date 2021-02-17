@@ -4,6 +4,7 @@ from datetime import datetime
 
 
 app = Flask(__name__)
+port = int(os.environ.get('PORT', 33507))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///post.db'
 db = SQLAlchemy(app)
 
